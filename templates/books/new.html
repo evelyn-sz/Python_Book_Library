@@ -2,6 +2,28 @@
 
 {% block content %}
 
-New book form
+<form action="/tasks" method="post"> <!-- a route to be executed-->
+    <div>
+      <label for="title">Book Title:</label>
+      <input type="text" id="title" name="title" placeholder="Book Title" required autofocus>
+    </div>
+    <div>
+      <label for="genre">Genre:</label>
+      <input type="text" id="genre" name="genre" placeholder="Genre" required>
+    </div>
+    <div>
+        <label for="publisher">Publisher:</label>
+        <input type="text" id="publisher" name="publisher" placeholder="Publisher" required>
+    </div>
+    <div>
+        <label for="author">Author:</label>
+        <select id="author" name="author_id">
+            {% for author in all_authors %}
+            <option value="{{ author.id }}">{{ author.full_name() }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <button type="submit">Add Book</button>
+  </form>
 
 {% endblock %}
