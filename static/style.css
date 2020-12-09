@@ -1,5 +1,12 @@
 body{
   font-family: "Helvetica", arial, sans-serif; font-size: 16px;
+  background-color: beige;
+
+}
+
+.header{
+  display:flex;
+  align-self: stretch;
 }
 
 .book {
@@ -10,6 +17,8 @@ body{
   display: flex;
   line-height: 18px;
   margin-bottom: 10px;
+  background-color: burlywood;
+
 }
 
 .name {
